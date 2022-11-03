@@ -1,5 +1,4 @@
 const fs = require("fs");
-// const path = require("path");
 
 var fileName = __dirname + "\\text.txt";
 
@@ -9,9 +8,7 @@ readStream.on("readable", () => {
 
   var data = readStream.read();
   
-  if (data == null) {
-    return null;
-  } else {
+  if (data != null) {
     console.log(data);
   }
 });
