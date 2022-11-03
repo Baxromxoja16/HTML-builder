@@ -3,7 +3,7 @@ const fs = require("fs");
 
 var fileName = __dirname + "\\text.txt";
 
-const readStream = new fs.ReadStream(fileName, { encoding: "utf-8" });
+const readStream = new fs.ReadStream(fileName, "utf-8");
 
 readStream.on("readable", () => {
 
