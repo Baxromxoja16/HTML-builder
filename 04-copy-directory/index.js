@@ -1,7 +1,8 @@
 const fs = require("fs");
+const path = require("path");
 
-const folderNameCopy = __dirname + "\\file-copy";
-const folderName = __dirname + "\\files";
+const folderNameCopy = path.join(__dirname , "\\file-copy") ;
+const folderName = path.join(__dirname , "\\files")
 
 //create folder "file-copy"
 fs.mkdir(folderNameCopy, (err) => {
