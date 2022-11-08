@@ -3,6 +3,7 @@ const path = require("path");
 
 const stylePath = path.join(__dirname, "styles");
 const bandleStyle = path.join(__dirname, "project-dist", "bundle.css");
+var answer = ""
 
 fs.readdir(stylePath, (err, files) => {
   // watch styles folder
@@ -15,8 +16,9 @@ fs.readdir(stylePath, (err, files) => {
         var data = createRead.read();
 
         if (data != null) {
+          answer += data
           var createWrite = fs.createWriteStream(bandleStyle);
-          createWrite.write(data);
+          createWrite.write(answer);
         }
       });
     }
